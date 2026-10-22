@@ -5,25 +5,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Join The Signal — Telegram Channel</title>
-  <!-- Meta Pixel Code -->
-  <script>
-    !function (f, b, e, v, n, t, s) {
-      if (f.fbq) return; n = f.fbq = function () {
-        n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-      };
-      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-      n.queue = []; t = b.createElement(e); t.async = !0;
-      t.src = v; s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2018576816212453');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=2018576816212453&ev=PageView&noscript=1" /></noscript>
-  <!-- End Meta Pixel Code -->
   <meta name="description"
     content="Join our private Telegram channel for daily signals, calls and insider drops. Spots closing fast." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -826,23 +807,10 @@
 
   <script>
     // ===== Telegram link (replace with your real channel URL) =====
-    // var TELEGRAM_URL = "https://t.me/ngo_club";
-    var TELEGRAM_URL = "https://t.me/+w8ruB_r-zGBhZDJl";
+    var TELEGRAM_URL = "https://t.me/ngo_club";
     ["joinBtn", "joinBtn2"].forEach(function (id) {
       var el = document.getElementById(id);
       if (el) el.setAttribute("href", TELEGRAM_URL);
-    });
-
-    // ===== Meta Pixel conversion on Telegram link click =====
-    // Fires on ANY click of a link pointing to Telegram (t.me / telegram.me).
-    document.addEventListener("click", function (e) {
-      var a = e.target.closest ? e.target.closest("a") : null;
-      if (!a || !a.href) return;
-      if (!/(^|\.)(t\.me|telegram\.me)\//i.test(a.href) && a.href.indexOf("t.me/") === -1) return;
-      if (window.fbq) {
-        fbq('track', 'Lead', { content_name: 'Telegram Join', content_category: 'telegram' }); // standard conversion event
-        fbq('trackCustom', 'TelegramJoin', { channel: 'ngo_club' });                          // for a Custom Conversion
-      }
     });
 
     // ===== Typewriter rotating hero text =====
